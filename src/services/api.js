@@ -9,15 +9,14 @@ export const login = async (data) => {
     });
 
     if (!res.ok) {
-      // Si no es 2xx, lee el texto y lanza error
       const errorText = await res.text();
       throw new Error(errorText);
     }
 
-    return await res.json(); // Solo parsea JSON si todo va bien
+    return await res.json();
   } catch (error) {
     console.error("Error en login:", error.message);
-    throw error; // Para que el front pueda manejarlo
+    throw error;
   }
 };
 
