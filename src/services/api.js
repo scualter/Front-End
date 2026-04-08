@@ -1,4 +1,4 @@
-const API_URL = "https://api.render.com/deploy/srv-d7b8chnkijhs73ash88g?key=q7IOVOGodg4";
+const API_URL = "https://proyecto-final-backend-pwhh.onrender.com";
 
 export const login = async (data) => {
   const res = await fetch(`${API_URL}/auth/login`, {
